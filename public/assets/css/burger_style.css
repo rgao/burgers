@@ -1,3 +1,44 @@
-ul {
-    color: "red"
+body {
+    background-image: url("../img/nutrition.jpg");
+    background-size: cover;
+}
+
+#main-title {
+    font-family: "Impact";
+    color: goldenrod;
+}
+
+#main-img {
+    border: 3px solid goldenrod;
+    border-radius: 30%;
+}
+
+#available {
+    font-family: "Impact";
+    color: lightgreen;
+}
+
+#available-list {
+    color: turquoise;
+}
+
+#devoured {
+    font-family: "Impact";
+    color:magenta;
+}
+
+#devoured-list {
+    color: violet;
+}
+
+ul, .create-form {
+    font-weight: bold;
+}
+
+.create-form, #form-title {
+    color: lightskyblue;
+}
+
+#form-title {
+    font-family: "Impact";
 }

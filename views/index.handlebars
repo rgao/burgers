@@ -1,36 +1,46 @@
-<h1>Bun Fun Time!</h1>
+<div class="container">
+    <h1 id="main-title" class="my-3">Bun Fun Time!</h1>
 
-<h2>Available Burgers</h2>
+    <img id="main-img" class="my-3" src="/assets/img/burger.jpg">
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        {{burger_name}}
-        <button class="eat-btn btn-danger" data-id="{{id}}">DEVOUR!</button>
-    </li>{{/unless}}
-    {{/each}}
-</ul>
+    <div class="row mt-2">
+        <div class="col-4">
+            <h2 id="available">Available Burgers</h2>
 
-<h2>Devoured Burgers</h2>
+            <ul id="available-list">
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    {{burger_name}}
+                    <button class="eat-btn btn btn-danger" data-id="{{id}}">DEVOUR!</button>
+                </li>{{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-        <li>
-            {{burger_name}}
-        </li>
-        {{/if}}
-    {{/each}}
-</ul>
+        <div class="col-4">
+            <h2 id="devoured">Devoured Burgers</h2>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burger-input">Burger Name:</label>
-        <input type="text" id="burger-input" name="name">
+            <ul id="devoured-list">
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 
-    <button type="submit">Add Burger</button>
-</form>
+    <h2 id="form-title">Add a Burger</h2>
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="burger-input">Burger Name:</label>
+            <input type="text" id="burger-input" name="name">
+        </div>
+
+        <button type="submit" class="btn btn-info">Add Burger</button>
+    </form>
+</div>
